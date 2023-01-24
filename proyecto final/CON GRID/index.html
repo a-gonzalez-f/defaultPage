@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae Online</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i> MENU</span>
+    <nav class="main-nav">
+        <ul class="menu" id="menu">
+            <li class="menu__item"><a href="#info" class="menu__link"> Informacion Personal </a></li>
+            <li class="menu__item container-submenu">
+                <a href="#" class="menu__link submenu-btn">Formación Académica   <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul class="submenu">
+                    <li class="menu__item"><a href="#terciario" class="menu__link" onclick="mostrart();"> Terciarios </a></li>
+                    <li class="menu__item"><a href="#posgrados" class="menu__link" onclick="mostrarp();"> Posgrados y Masters </a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#experiencia" class="menu__link">Experiencia Laboral</a></li>
+            <li><button class="button" id="bdark" onclick="modo()">MODO OSCURO</button></li>
+        </ul>
+    </nav>
+    <div class="grid-container">
+        <div id="titulo">CURRICULUM VITAE ONLINE</div>
+        <div id="nombre">OMAR SINSON</div>
+        <div id="info">
+            <div id="foto"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Foto 4x4 Omar Sinson" height="150" width="150"></div>
+            <h3>INFORMACIÓN PERSONAL</h3>
+            <button id=mostrari class="button" onclick="mostrari();">Mostrar</button>
+                <div id="infotexto">
+                    <ul style="list-style-type:square">
+                    <li>Nombre: Omar Juan Sinson</li>
+                    <li>Dirección: Avenida Siempre Viva 742</li>
+                    <li>Fecha de nacimiento: 30/02/86</li>
+                    <li>Teléfono: 123-456-789</li>
+                    <li>Email: omarsinson@coldmail.com</li>
+                    </ul>
+                </div>
+                <div id="habilidades">
+                    <h3>HABILIDADES</h3>
+                    <ul style="list-style-type:square">
+                    <li>Trabajo en Equipo</li>
+                    <li>Programación</li>
+                    <li>Compañerismo</li>
+                    <li>Excel</li>
+                    <li>Paint</li>
+                    </ul>
+                </div>
+                <div id="idiomas">
+                    <h3>IDIOMAS</h3>
+                    <ul style="list-style-type:square">
+                    <li>Español</li>
+                    <li>Inglés</li>
+                    <li>Noruego</li>
+                    <li>Jeringozo</li>
+                    </ul>
+                </div>      
+        </div>
+        <div id="academico">
+            <h3>FORMACIÓN ACADÉMICA</h3>
+            <div id="forma">
+                <h4>Escuela Secundaria de Campo Primavera (1990-1996)</h4>
+                <p>• Bachillerato</p>
+            </div>
+            <div id="terciario">
+                <h3>TERCIARIOS <button id="flechat" onclick="mostrart();"><i class="fa-sharp fa-solid fa-caret-down"></i></h3>
+                <div id="terciariotext">
+                    <h4>Massachusetts Institute of Technology: MIT</h4>
+                    <p>• Físico Nuclear (2006-2011)</p>
+                    <h4>International Online Courses Academy</h4>
+                    <p>• Licenciatura en Circo (10/11/12 - 11/11/12)</p>
+                </div>
+            </div>
+            <div id="posgrados">
+                <h3>POSGRADOS Y MASTERS <button id="flechap" onclick="mostrarp();"><i class="fa-sharp fa-solid fa-caret-down"></i></button></h3>
+                <div id="posgradostext">
+                    <h4>Pay to Win Institute</h4>
+                    <p>• Posgrado en Procesos Químicos con Walter White</p>
+                    <h4>Owners of Truth University</h4>
+                    <p>• Maestría en Perspectiva Isométrica de Género </p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="experiencia">
+            <h3>EXPERIENCIA LABORAL</h3>
+            <div>
+                <h4>Planta Nuclear Embalse</h4> 
+                <p>• Encargado de Seguridad</p>
+                <h4>Planta Nuclear Atucha</h4>
+                <p>• Operario Técnico</p>
+                <h4>NASA</h4>
+                <p>• Astronauta</p>
+            </div>
+        </div>
+        <div id="creditos">
+            <p class="cred">Página creada con HTML, CSS, y Javascript</p>
+            <p class="cred">Argentina Programa 2023</p>
+            <p class="cred">Gonzalez Fidelibus, Agustín</p>
+            </ul>
+        </div>    
+    </div>
+    <script src="./js/script.js"></script>   
+</body>
+</html>
