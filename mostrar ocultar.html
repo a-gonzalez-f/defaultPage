@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="boton" onclick="mostrar();">Mostrar</button>
+    <div id="img">
+        <p>me ves</p>
+        <button id="boton" onclick="ocultar();">Ocultar</button>
+    </div>
+
+    <script>
+        function mostrar (){
+            document.getElementById('img').style.display = 'block';
+        }
+
+        function ocultar (){
+            document.getElementById('img').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
