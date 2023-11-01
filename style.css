@@ -61,15 +61,17 @@ p {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "candidato grafico grafico grafico grafico grafico grafico grafico"
-    "candidato resultado resultado resultado resultado resultado resultado resultado";
+    "candidato grafico"
+    "candidato resultado";
   background-color: #eff6fa;
   border-radius: 10px;
 }
 
 input {
-  width: 50px;
-  padding: 0.1rem 0.6rem;
+  width: 4vw;
+  min-width: 50px;
+  max-width: 70px;
+  padding: 0.2rem 0.6rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
@@ -79,32 +81,34 @@ input {
   grid-area: candidato;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 150px;
+  justify-content: space-evenly;
+  height: 140px;
+  width: 100%;
 }
 
 .grafico {
   grid-area: grafico;
-  width: 95%;
+  width: 60vw;
+  margin: 0 auto;
 }
 
 .porcentajes {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 .votosgral {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .barra {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
-  height: 30px;
-  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  margin-top: 2%;
 }
 
 .proporcion {
@@ -129,7 +133,13 @@ input {
   grid-area: resultado;
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 3%;
+}
+
+.aport {
+  font-size: 12px;
 }
 
 h1,
@@ -159,6 +169,7 @@ h2 {
 }
 
 .containerbottom {
+  width: 100vw;
   display: flex;
   height: 20vh;
   align-items: center;
@@ -180,6 +191,7 @@ h2 {
 .porcentajeFinal {
   font-size: 7vw;
   font-weight: 500;
+  padding-bottom: 1rem;
 }
 
 .detalle {
@@ -202,4 +214,60 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1% 1.8rem 1%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  input {
+    min-width: 40px;
+    font-size: 0.7rem;
+  }
+  .grid-container {
+    grid-template-areas:
+      "candidato candidato"
+      "grafico grafico";
+    height: auto;
+  }
+  .resultados {
+    display: none;
+  }
+  .retrato {
+    max-width: 50%;
+  }
+  .candidato {
+    height: 100px;
+    justify-content: center;
+    padding-top: 0.7rem;
+  }
+  .grafico {
+    width: 95%;
+  }
+  .porcentajes {
+    padding: 1rem 0 2rem 0;
+  }
+  .item {
+    flex-direction: column;
+  }
+  .item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .detalle {
+    font-size: 10px;
+  }
+  .barra {
+    margin-top: 0;
+  }
 }
