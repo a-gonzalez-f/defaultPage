@@ -179,7 +179,7 @@ h2 {
 .containerbottom {
   width: 100vw;
   display: flex;
-  height: 25vh;
+  height: 22vh;
   align-items: center;
   bottom: 0;
 }
