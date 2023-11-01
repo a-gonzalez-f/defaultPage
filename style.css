@@ -47,15 +47,22 @@ header {
   margin: 0 auto;
   text-align: center;
   margin-top: 4rem;
-  padding: 0 5% 3rem 5%;
+  padding: 0 5% 0 5%;
 }
 .ppal {
-  max-height: 65vh;
+  max-height: 68vh;
   overflow-y: auto;
 }
 
 p {
   display: inline;
+}
+
+.candidato-container {
+  border-radius: 10px;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0px 0px 10px #ccc;
 }
 
 .grid-container {
@@ -99,7 +106,7 @@ input {
 }
 
 .votosgral {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .barra {
@@ -188,6 +195,12 @@ h2 {
   flex-direction: column;
 }
 
+.rf {
+  padding: 0;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
 .porcentajeFinal {
   font-size: 7vw;
   font-weight: 500;
@@ -218,7 +231,7 @@ h2 {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1% 2.5rem 1%;
+    padding: 0 1% 0 1%;
   }
   h1 {
     font-size: 1.8rem;
