@@ -1,3 +1,6 @@
+let finalMassa = 0;
+let finalMilei = 0;
+
 const candidatos = [
   {
     nombre: "massa",
@@ -227,3 +230,42 @@ function calcularResultadoFinal() {
 }
 
 calcularResultadoFinal();
+
+document.getElementById("submitBtn").addEventListener("click", function () {
+  let resultados = [];
+
+  // Recorre los candidatos
+  candidatos.forEach((candidato) => {
+    const nombreCandidato = candidato.nombre;
+    const porcentajeVotos = candidato.porcentajeVotos;
+    const porcentajeMassa =
+      parseFloat(candidato.elementosHTML.porcentajeMassa.value) || 0;
+    const porcentajeMilei =
+      parseFloat(candidato.elementosHTML.porcentajeMilei.value) || 0;
+
+    // Agrega la información de cada candidato al array de resultados
+    resultados.push(
+      `Del "${porcentajeVotos}" que sacó "${nombreCandidato}", se van "${porcentajeMassa}" para Massa, "${porcentajeMilei}" para Milei.`
+    );
+  });
+
+  // Calcula el resultado final
+  calcularResultadoFinal();
+
+  // Muestra los resultados en la pantalla modal
+  const screenshot = document.getElementById("screenshot");
+  const resultadosCapturados = document.getElementById("resultadoCapturado");
+  screenshot.style.display = "flex";
+  resultadosCapturados.innerHTML = `
+      <h3>Resultados Estimados:</h3>
+      <ul>
+        ${resultados.map((resultado) => `<li>${resultado}</li>`).join("")}
+      </ul>
+      <p>Resultado Final Massa: ${finalMassa.toFixed(2)}%</p>
+      <p>Resultado Final Milei: ${finalMilei.toFixed(2)}%</p>
+    `;
+
+  document.getElementById("screenshot").addEventListener("click", function () {
+    screenshot.style.display = "none";
+  });
+});
