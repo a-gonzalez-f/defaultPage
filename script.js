@@ -234,7 +234,6 @@ calcularResultadoFinal();
 document.getElementById("submitBtn").addEventListener("click", function () {
   let resultados = [];
 
-  // Recorre los candidatos
   candidatos.forEach((candidato) => {
     const nombreCandidato = candidato.nombre;
     const porcentajeVotos = candidato.porcentajeVotos;
@@ -243,13 +242,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     const porcentajeMilei =
       parseFloat(candidato.elementosHTML.porcentajeMilei.value) || 0;
 
-    // Agrega la información de cada candidato al array de resultados
     resultados.push(
-      `Del "${porcentajeVotos}" que sacó "${nombreCandidato}", se van "${porcentajeMassa}" para Massa, "${porcentajeMilei}" para Milei.`
+      `Del ${porcentajeVotos}% que sacó ${nombreCandidato}, <br>se van ${porcentajeMassa}% para Massa, ${porcentajeMilei}% para Milei.`
     );
   });
 
-  // Calcula el resultado final
   calcularResultadoFinal();
 
   // Muestra los resultados en la pantalla modal
@@ -257,12 +254,26 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const resultadosCapturados = document.getElementById("resultadoCapturado");
   screenshot.style.display = "flex";
   resultadosCapturados.innerHTML = `
-      <h3>Resultados Estimados:</h3>
+      <h3>RESULTADOS ESTIMADOS:</h3>
       <ul>
         ${resultados.map((resultado) => `<li>${resultado}</li>`).join("")}
       </ul>
-      <p>Resultado Final Massa: ${finalMassa.toFixed(2)}%</p>
-      <p>Resultado Final Milei: ${finalMilei.toFixed(2)}%</p>
+      <div class="flex">
+        <div>
+          <img src="./img/massa.png" alt="massa" class="retratocapt"/>
+        </div>
+        <div>
+          <span class="fontcapt">${finalMassa.toFixed(2)}%</span>
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <img src="./img/milei.png" alt="milei" class="retratocapt"/>
+        </div>
+        <div>
+          <span class="fontcapt">${finalMilei.toFixed(2)}%</span>
+        </div>
+      </div>
     `;
 
   document.getElementById("screenshot").addEventListener("click", function () {

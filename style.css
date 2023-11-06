@@ -315,15 +315,42 @@ h2 {
 }
 
 #resultadoCapturado {
+  min-width: 40vw;
+  max-width: 80vw;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255);
 }
 
 #resultadoCapturado > ul > li {
   margin: 1rem;
+}
+
+.fontcapt {
+  font-size: 50px;
+  padding: 1rem;
+}
+
+.retratocapt {
+  width: 150px;
+  max-width: 20vw;
+}
+
+.flex {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+.grow-2 {
+  flex-grow: 2;
 }
