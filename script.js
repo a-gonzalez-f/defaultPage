@@ -3,7 +3,7 @@ let finalMilei = 0;
 
 const candidatos = [
   {
-    nombre: "massa",
+    nombre: "Massa",
     porcentajeVotos: 36.68,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#massa-massa"),
@@ -18,7 +18,7 @@ const candidatos = [
     },
   },
   {
-    nombre: "milei",
+    nombre: "Milei",
     porcentajeVotos: 29.98,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#milei-massa"),
@@ -33,7 +33,7 @@ const candidatos = [
     },
   },
   {
-    nombre: "bullrich",
+    nombre: "Bullrich",
     porcentajeVotos: 23.83,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#bullrich-massa"),
@@ -48,7 +48,7 @@ const candidatos = [
     },
   },
   {
-    nombre: "schiaretti",
+    nombre: "Schiaretti",
     porcentajeVotos: 6.78,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#schiaretti-massa"),
@@ -63,7 +63,7 @@ const candidatos = [
     },
   },
   {
-    nombre: "bregman",
+    nombre: "Bregman",
     porcentajeVotos: 2.7,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#bregman-massa"),
@@ -78,7 +78,7 @@ const candidatos = [
     },
   },
   {
-    nombre: "blanco",
+    nombre: "en blanco",
     porcentajeVotos: 2.04,
     elementosHTML: {
       porcentajeMassa: document.querySelector("#blanco-massa"),
