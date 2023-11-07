@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+:root {
+  --color-massa: #009cde;
+  --color-milei: #753bbd;
+  --color-bullrich: #fedd00;
+  --color-schiaretti: #43488f;
+  --color-bregman: #f95461;
+  --color-blanco: #aaaaaa;
+}
+
+.massa {
+  background-color: var(--color-massa);
+}
+.milei {
+  background-color: var(--color-milei);
+}
+.bullrich {
+  background-color: var(--color-bullrich);
+}
+.schiaretti {
+  background-color: var(--color-schiaretti);
+}
+.bregman {
+  background-color: var(--color-bregman);
+}
+.blanco {
+  background-color: var(--color-blanco);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 10;
+  box-shadow: 0px 0px 10px #757575;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  margin-top: 4rem auto 0 auto;
+  padding: 11vh 0 33vh 0;
+  overflow-y: auto;
+}
+
+p {
+  display: inline;
+}
+
+.candidato-container {
+  border-radius: 10px;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "candidato grafico"
+    "candidato resultado";
+  background-color: #eff6fa;
+  border-radius: 10px;
+}
+
+input {
+  width: 4vw;
+  min-width: 50px;
+  max-width: 70px;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.candidato {
+  grid-area: candidato;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 140px;
+  width: 100%;
+}
+
+.grafico {
+  grid-area: grafico;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.porcentajes {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.votosgral {
+  font-size: 20px;
+}
+
+.barra {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  margin-top: 2%;
+}
+
+.proporcion {
+  height: 100%;
+  transition: width 1s;
+  border-radius: 6px;
+}
+
+.ma {
+  width: 0%;
+}
+
+.mi {
+  width: 0%;
+}
+
+.bl {
+  width: 0%;
+}
+
+.resultados {
+  grid-area: resultado;
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 3%;
+}
+
+.aport {
+  font-size: 12px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+.resultadoFinal {
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0px 0px 10px #757575;
+  max-height: 30vh;
+}
+
+.retrato {
+  width: 120px;
+  height: auto;
+  box-shadow: 0px 0px 10px #757575;
+  border-radius: 50%;
+  margin: 1rem;
+}
+.rect {
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.containerbottom {
+  width: 100vw;
+  display: flex;
+  height: 22vh;
+  align-items: center;
+  bottom: 0;
+}
+
+.item {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.rf {
+  padding: 0;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.porcentajeFinal {
+  font-size: 7vw;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.detalle {
+  background-color: #999;
+  display: flex;
+  justify-content: space-around;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 11vh 0 36vh 0 !important;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  input {
+    min-width: 40px;
+    font-size: 0.7rem;
+  }
+  .grid-container {
+    grid-template-areas:
+      "candidato candidato"
+      "grafico grafico";
+    height: auto;
+  }
+  .resultados {
+    display: none;
+  }
+  .retrato {
+    max-width: 50%;
+  }
+  .candidato {
+    height: 100px;
+    justify-content: center;
+    padding-top: 0.7rem;
+  }
+  .grafico {
+    width: 95%;
+  }
+  .porcentajes {
+    padding: 1rem 0 2rem 0;
+  }
+  .item {
+    flex-direction: column;
+  }
+  .item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .detalle {
+    font-size: 10px;
+  }
+  .barra {
+    margin-top: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+}
+
+#submitBtn {
+  position: fixed;
+  bottom: 27vh;
+  right: 0vw;
+  background-color: #009cde;
+  box-shadow: 0px 0px 10px #757575;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 0 0 10px;
+  cursor: pointer;
+  z-index: 11;
+}
+#submitBtn:hover {
+  box-shadow: 0px 0px 10px #555;
+}
+
+#screenshot {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  text-align: center;
+}
+
+#resultadoCapturado {
+  min-width: 40vw;
+  max-width: 80vw;
+  padding: 1rem 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+#resultadoCapturado > ul > li {
+  margin: 1rem;
+}
+
+.fontcapt {
+  font-size: 40px;
+  padding: 1rem;
+}
+
+.retratocapt {
+  width: 120px;
+  max-width: 20vw;
+}
+
+.flex {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+.grow-2 {
+  flex-grow: 2;
+}
