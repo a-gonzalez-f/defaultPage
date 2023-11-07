@@ -231,29 +231,32 @@ function calcularResultadoFinal() {
 
 calcularResultadoFinal();
 
+// Submit btn y pantalla modal
 document.getElementById("submitBtn").addEventListener("click", function () {
-  let resultados = [];
+  if (finalMassa === 0 && finalMilei === 0) {
+    alert("Ingresá qué valores estimás de cada candidato");
+  } else {
+    let resultados = [];
 
-  candidatos.forEach((candidato) => {
-    const nombreCandidato = candidato.nombre;
-    const porcentajeVotos = candidato.porcentajeVotos;
-    const porcentajeMassa =
-      parseFloat(candidato.elementosHTML.porcentajeMassa.value) || 0;
-    const porcentajeMilei =
-      parseFloat(candidato.elementosHTML.porcentajeMilei.value) || 0;
+    candidatos.forEach((candidato) => {
+      const nombreCandidato = candidato.nombre;
+      const porcentajeVotos = candidato.porcentajeVotos;
+      const porcentajeMassa =
+        parseFloat(candidato.elementosHTML.porcentajeMassa.value) || 0;
+      const porcentajeMilei =
+        parseFloat(candidato.elementosHTML.porcentajeMilei.value) || 0;
 
-    resultados.push(
-      `Del ${porcentajeVotos}% que sacó ${nombreCandidato}, <br>se van ${porcentajeMassa}% para Massa, ${porcentajeMilei}% para Milei.`
-    );
-  });
+      resultados.push(
+        `Del ${porcentajeVotos}% que sacó ${nombreCandidato}, <br>se van ${porcentajeMassa}% para Massa, ${porcentajeMilei}% para Milei.`
+      );
+    });
 
-  calcularResultadoFinal();
+    calcularResultadoFinal();
 
-  // Muestra los resultados en la pantalla modal
-  const screenshot = document.getElementById("screenshot");
-  const resultadosCapturados = document.getElementById("resultadoCapturado");
-  screenshot.style.display = "flex";
-  resultadosCapturados.innerHTML = `
+    const screenshot = document.getElementById("screenshot");
+    const resultadosCapturados = document.getElementById("resultadoCapturado");
+    screenshot.style.display = "flex";
+    resultadosCapturados.innerHTML = `
       <h3>RESULTADOS ESTIMADOS:</h3>
       <ul>
         ${resultados.map((resultado) => `<li>${resultado}</li>`).join("")}
@@ -276,7 +279,10 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       </div>
     `;
 
-  document.getElementById("screenshot").addEventListener("click", function () {
-    screenshot.style.display = "none";
-  });
+    document
+      .getElementById("screenshot")
+      .addEventListener("click", function () {
+        screenshot.style.display = "none";
+      });
+  }
 });
