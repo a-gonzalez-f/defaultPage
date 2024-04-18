@@ -1,0 +1,11 @@
+/* color.css */
+
+:root {
+  --color-0: black;
+  --color-1: #ffffff;
+  --primary-color: #171717;
+  --secondary-color: #555;
+  --bg-color: #212121;
+  --n-color: #d10000;
+  --p-color: #31ea50;
+}
